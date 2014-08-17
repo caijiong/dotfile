@@ -1,0 +1,14 @@
+[alias]
+	st = status
+	ci = commit -s
+	l = log --pretty=fuller
+	ls = log --pretty=fuller -l --stat
+	lg = log --pretty=raw --graph
+	co = checkout
+	br = branch
+[user]
+	name = VOiD289
+	email = void4096@gmail.com
+[color]
+	ui = true
+[http]
