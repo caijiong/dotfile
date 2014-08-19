@@ -5,7 +5,7 @@ call vundle#begin()
 "" alternatively, pass a path where Vundle should install plugins " call vundle#begin('~/some/path/here')
 "" let Vundle manage Vundle, required
 
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'chase/vim-ansible-yaml'
@@ -150,3 +150,9 @@ colorscheme jellybeans
 
 ""DelimitMate
 let delimitMate_expand_cr = 1
+
+""YouCompleteMe
+let g:ycm_auto_trigger = 1
+let g:ycm_enable_diagnostic_signs = 0
+
+let g:ycm_global_ycm_extra_conf="~/.ycm_extra_conf.py"
