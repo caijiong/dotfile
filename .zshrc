@@ -71,7 +71,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+#DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # sbt - Scala
-export PATH="/home/void/App/sbt/bin:$PATH"
+export PATH="~/App/sbt/bin:$PATH"
 
 # color - 256
 export TERM="xterm-256color"

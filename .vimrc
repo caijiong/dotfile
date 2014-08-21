@@ -5,7 +5,6 @@ call vundle#begin()
 "" alternatively, pass a path where Vundle should install plugins " call vundle#begin('~/some/path/here')
 "" let Vundle manage Vundle, required
 
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'chase/vim-ansible-yaml'
@@ -22,12 +21,15 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
+
 Plugin 'bling/vim-airline'
 
 Plugin 'scrooloose/syntastic'
 
 Plugin 'nanotech/jellybeans.vim'
 "Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'Valloric/YouCompleteMe'
 
 "" All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -154,5 +156,12 @@ let delimitMate_expand_cr = 1
 ""YouCompleteMe
 let g:ycm_auto_trigger = 1
 let g:ycm_enable_diagnostic_signs = 0
-
 let g:ycm_global_ycm_extra_conf="~/.ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+"" C/C++
+au BufEnter *.c compiler gcc
+au BufEnter *.cpp compiler g++
