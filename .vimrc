@@ -164,4 +164,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 "" C/C++
 au BufEnter *.c compiler gcc
-au BufEnter *.cpp compiler g++
+"au BufEnter *.cpp compiler g++
+
+

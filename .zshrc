@@ -17,7 +17,7 @@ alias Update='sudo apt-get update'
 alias Upgrade='sudo apt-get upgrade'
 
 # Server
-alias loginHubl='ssh www.hubl.cn -l root -p 22000'
+alias loginHubl='ssh root@www.hubl.cn -p 22000'
 
 # Apache
 alias apacheRestart='sudo /etc/init.d/apache2 restart'
@@ -83,19 +83,24 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
+#Composer bin : drush
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # sbt - Scala
 export PATH="~/App/sbt/bin:$PATH"
 
-# color - 256
+# color256 && tmux  __ http://www.economyofeffort.com/2014/07/04/zsh/
 export TERM="xterm-256color"
+[ -n "$TMUX" ] && export TERM="screen-256color"
 
 # for vim <C-S>
 alias vim="stty stop '' -ixoff ; vim"
-#`Frozing' tty, so after any command terminal settings will be restored
-ttyctl -f
-
+#`Frozing' tty, so after any command terminal settings will be restored ttyctl -f 
 # rm safely
 alias rm='mv -t /tmp'
 
 # grunt completions
 eval "$(grunt --completion=zsh)"
+
+# tmux
+alias tmux='tmux -2'
